@@ -28,15 +28,13 @@ console.log(
 // INFORMACIÓN GENERAL SOBRE LOS VUELOS
 const displayOfFlights = flights.map((flight) => {
     if (flight.scale) {
-        console.log(
+        return console.log(
             `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y realiza escala`
         );
-        return;
     } else {
-        console.log(
+        return console.log(
             `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y no hace escala`
         );
-        return;
     }
 });
 
