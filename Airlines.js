@@ -26,18 +26,17 @@ console.log(
 );
 
 // INFORMACIÓN GENERAL SOBRE LOS VUELOS
-const displayOfFlights = flights.map((flight) => {
-    if (flight.scale) {
-        return console.log(
-            `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y realiza escala`
-        );
-    } else {
-        return console.log(
-            `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y no hace escala`
-        );
-    }
-    return;
-});
+// const displayOfFlights = flights.map((flight) => {
+//     if (flight.scale) {
+//         return console.log(
+//             `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y realiza escala`
+//         );
+//     } else {
+//         return console.log(
+//             `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y no hace escala`
+//         );
+//     }
+// });
 
 // CALCULO DEL PRECIO PROMEDIO DE UN VUELO
 for (let i = 0; i < flights.length; i++) {
