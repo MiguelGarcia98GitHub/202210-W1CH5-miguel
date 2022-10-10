@@ -56,9 +56,11 @@ function newTurn() {
             playerListStorage.push(player);
         }
 
-        let playerListOrderedByScore = playerListStorage.sort((a, b) =>
-            a.bestScore > b.bestScore ? -1 : 1
-        );
+        let playerListOrderedByScore = [
+            ...playerListStorage.sort((a, b) =>
+                a.bestScore > b.bestScore ? -1 : 1
+            ),
+        ];
 
         console.log("Veamos el Ranking de usuarios:");
         for (let i = 0; i < playerListOrderedByScore.length; i++) {
@@ -149,7 +151,6 @@ function newTurn() {
         console.log(
             "Decidiste dejar de jugar en medio de la partida antes de que terminase"
         );
-        return;
     }
 }
 
@@ -171,7 +172,6 @@ function playBingo() {
     if (namePrompt !== null) {
         // new logic
         if (!(namePrompt in playerList1)) {
-            currentPlayer1;
             playerList1[namePrompt] = {
                 name: namePrompt,
                 bestScore: 0,
