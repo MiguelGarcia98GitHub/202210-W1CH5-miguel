@@ -57,5 +57,5 @@ function calcular1Num(num1) {
 }
 
 function contenerNumero(num1) {
-    return /[0-9]/.test(num1);
+    return /\d/.test(num1);
 }
