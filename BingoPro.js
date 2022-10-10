@@ -15,6 +15,7 @@ let firstLineValue = 0;
 let secondLineValue = 0;
 let thirdLineValue = 0;
 let storeOfRandomNumbers = [];
+
 //
 
 function generateRandomBingoPaper() {
@@ -66,21 +67,22 @@ function newTurn() {
                 `En el puesto ${i} tenemos al usuario ${playerListOrderedByScore[i].name} con la puntuación de ${playerListOrderedByScore[i].bestScore} `
             );
         }
-
-        const playAgain = confirm("¿Deseas jugar otra vez al Bingo?");
-        if (playAgain === true) {
-            console.log("Comenzaste otra partida al Bingo");
-            playBingo();
-            return;
-        }
-        if (playAgain === false) {
-            console.log("Dejaste de jugar al Bingo tras esta partida");
-            return;
-        }
     }
     // New turn
     const newTurnConfirm = confirm("¿Empezamos un nuevo turno?");
+    if (currentPoints === 855) {
+        return;
+    }
+
+    if (!newTurnConfirm) {
+        return;
+    }
+
     if (newTurnConfirm === true) {
+        if (currentPoints === 850) {
+            return;
+        }
+
         currentPlayer1.currentScore -= 5; // new
         currentRoundCountNumber += 1;
         console.log(`Tienes: ${currentPlayer1.currentScore} puntos`);
@@ -150,6 +152,7 @@ function newTurn() {
             "Decidiste dejar de jugar en medio de la partida antes de que terminase"
         );
     }
+    newTurn();
 }
 
 generateRandomBingoPaper();
