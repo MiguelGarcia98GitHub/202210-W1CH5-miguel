@@ -36,6 +36,8 @@ const displayOfFlights = flights.map((flight) => {
             `El vuelo con origen ${flight.from} y destino ${flight.to} tiene un coste de ${flight.cost} y no hace escala`
         );
     }
+
+    return;
 });
 
 // CALCULO DEL PRECIO PROMEDIO DE UN VUELO
