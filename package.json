@@ -1,0 +1,32 @@
+{
+    "name": "challenge-5-miguel",
+    "version": "1.0.0",
+    "description": "learning eslint and sonarcloud",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MiguelGarcia98GitHub/202210-W1CH5-miguel.git"
+    },
+    "keywords": [
+        "ESLint",
+        "SonarCloud"
+    ],
+    "author": "Miguel Garcia",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MiguelGarcia98GitHub/202210-W1CH5-miguel/issues"
+    },
+    "homepage": "https://github.com/MiguelGarcia98GitHub/202210-W1CH5-miguel#readme",
+    "devDependencies": {
+        "eslint": "^8.25.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.3.0",
+        "eslint-plugin-promise": "^6.0.1"
+    }
+}
