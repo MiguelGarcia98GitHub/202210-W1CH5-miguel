@@ -56,11 +56,9 @@ function newTurn() {
             playerListStorage.push(player);
         }
 
-        let playerListOrderedByScore = [
-            ...playerListStorage.sort((a, b) =>
-                a.bestScore > b.bestScore ? -1 : 1
-            ),
-        ];
+        let playerListOrderedByScore = +[...playerListStorage].sort((a, b) =>
+            a.bestScore > b.bestScore ? -1 : 1
+        );
 
         console.log("Veamos el Ranking de usuarios:");
         for (let i = 0; i < playerListOrderedByScore.length; i++) {
